@@ -7,13 +7,9 @@ interface ServicesGridProps {
 
 export const ServicesGrid = ({ services }: ServicesGridProps) => {
   return (
-    <div className="flex flex-col lg:grid lg:grid-cols-3 gap-8 w-full max-w-6xl">
+    <div className="grid w-full max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
       {services.map((service, index) => (
-        <ServiceCard 
-          key={service.id} 
-          service={service} 
-          index={index} 
-        />
+        <ServiceCard key={service.id} service={service} index={index} />
       ))}
     </div>
   )

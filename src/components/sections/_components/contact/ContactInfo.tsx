@@ -6,18 +6,18 @@ interface ContactInfoProps {
 
 export const ContactInfo = ({ data }: ContactInfoProps) => {
   return (
-    <div className="code-block glow hover:scale-105 transition-all duration-300 p-8">
+    <div className="code-block glow h-full transition-all duration-300 p-4 sm:p-6 lg:p-8 lg:hover:scale-105">
       <h3 className="text-xl md:text-2xl font-bold mb-4 font-mono">
         <span className="text-primary-blue">public record</span>{' '}
         <span className="text-white">ContactChannels</span>
         <span className="text-primary-blue">(</span>
       </h3>
-      <p className="text-gray-400 mb-8 text-lg font-mono">
+      <p className="mb-6 text-base font-mono text-gray-400 sm:mb-8 sm:text-lg">
         {'// Available communication channels'}
       </p>
 
-      <div className="flex flex-col space-y-6 font-mono">
-        <div className="flex items-center space-x-4">
+      <div className="flex flex-col gap-5 font-mono sm:gap-6">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
           <span className="text-primary-blue">String</span>{' '}
           <span style={{ paddingLeft: 5 }} className="text-white">
             email
@@ -25,14 +25,14 @@ export const ContactInfo = ({ data }: ContactInfoProps) => {
           <span className="text-primary-blue">=</span>
           <a
             href={`mailto:${data.personal.email}`}
-            className="text-accent-green hover:text-white transition-colors"
+            className="break-all text-accent-green hover:text-white transition-colors"
           >
             &quot;{data.personal.email}&quot;
           </a>
           <span className="text-gray-400">,</span>
         </div>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
           <span className="text-primary-blue">String</span>{' '}
           <span style={{ paddingLeft: 5 }} className="text-white">
             phone
@@ -47,7 +47,7 @@ export const ContactInfo = ({ data }: ContactInfoProps) => {
           <span className="text-gray-400">,</span>
         </div>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
           <span className="text-primary-blue">String</span>{' '}
           <span style={{ paddingLeft: 5 }} className="text-white">
             location

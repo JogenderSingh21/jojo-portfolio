@@ -38,35 +38,35 @@ export const Sections = ({
       <SectionSeparator />
       <section
         id="experience"
-        className="flex max-w-full lg:!max-w-4/5 justify-center"
+        className="flex w-full max-w-full justify-center lg:!max-w-4/5"
       >
         <ExperienceSection data={experience} />
       </section>
       <SectionSeparator />
       <section
         id="services"
-        className="flex max-w-full lg:!max-w-4/5 justify-center"
+        className="flex w-full max-w-full justify-center lg:!max-w-4/5"
       >
         <ServicesSection data={services} />
       </section>
       <SectionSeparator />
       <section
         id="tech-stack"
-        className="flex max-w-full lg:!max-w-4/5 justify-center"
+        className="flex w-full max-w-full justify-center lg:!max-w-4/5"
       >
         <TechStackSection data={techStack.techStack} />
       </section>
       <SectionSeparator />
       <section
         id="projects"
-        className="flex max-w-full lg:!max-w-4/5 justify-center"
+        className="flex w-full max-w-full justify-center lg:!max-w-4/5"
       >
         <ProjectsSection data={projects} />
       </section>
       <SectionSeparator />
       <section
         id="contact"
-        className="flex max-w-full lg:!max-w-4/5 justify-center"
+        className="flex w-full max-w-full justify-center lg:!max-w-4/5"
       >
         <ContactSection data={personalInfo} />
       </section>

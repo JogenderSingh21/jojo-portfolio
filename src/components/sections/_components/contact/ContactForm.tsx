@@ -1,6 +1,6 @@
 export const ContactForm = () => {
   return (
-    <div className="code-block glow hover:scale-105 transition-all duration-300 p-8">
+    <div className="code-block glow transition-all duration-300 p-4 sm:p-6 lg:p-8">
       <h3 className="text-xl md:text-2xl font-bold mb-4 font-mono">
         <span className="text-primary-blue">public record</span>{' '}
         <span className="text-white">ClientRequest</span>
@@ -25,7 +25,7 @@ export const ContactForm = () => {
             id="name"
             name="name"
             required
-            className="w-full bg-background border border-border-color rounded-lg px-6 py-5 text-gray-300 focus:border-primary-blue focus:outline-none transition-colors font-mono"
+            className="w-full bg-background border border-border-color rounded-lg px-3 py-4 text-gray-300 focus:border-primary-blue focus:outline-none transition-colors font-mono sm:px-6 sm:py-5"
             placeholder="Your name"
           />
         </div>
@@ -44,7 +44,7 @@ export const ContactForm = () => {
             id="email"
             name="email"
             required
-            className="w-full bg-background border border-border-color rounded-lg px-6 py-5 text-gray-300 focus:border-primary-blue focus:outline-none transition-colors font-mono"
+            className="w-full bg-background border border-border-color rounded-lg px-3 py-4 text-gray-300 focus:border-primary-blue focus:outline-none transition-colors font-mono sm:px-6 sm:py-5"
             placeholder="your.email@example.com"
           />
         </div>
@@ -62,7 +62,7 @@ export const ContactForm = () => {
             type="text"
             id="company"
             name="company"
-            className="w-full bg-background border border-border-color rounded-lg px-6 py-5 text-gray-300 focus:border-primary-blue focus:outline-none transition-colors font-mono"
+            className="w-full bg-background border border-border-color rounded-lg px-3 py-4 text-gray-300 focus:border-primary-blue focus:outline-none transition-colors font-mono sm:px-6 sm:py-5"
             placeholder="Your company"
           />
         </div>
@@ -79,7 +79,7 @@ export const ContactForm = () => {
           <select
             id="budget"
             name="budget"
-            className="w-full bg-background border border-border-color rounded-lg px-6 py-5 text-gray-300 focus:border-primary-blue focus:outline-none transition-colors font-mono"
+            className="w-full bg-background border border-border-color rounded-lg px-3 py-4 text-gray-300 focus:border-primary-blue focus:outline-none transition-colors font-mono sm:px-6 sm:py-5"
           >
             <option value="">Select budget range</option>
             <option value="under-5k">Under $5,000</option>
@@ -103,7 +103,7 @@ export const ContactForm = () => {
             name="project"
             rows={6}
             required
-            className="w-full bg-background border border-border-color rounded-lg px-6 py-5 text-gray-300 focus:border-primary-blue focus:outline-none transition-colors resize-vertical font-mono"
+            className="w-full bg-background border border-border-color rounded-lg px-3 py-4 text-gray-300 focus:border-primary-blue focus:outline-none transition-colors resize-vertical font-mono sm:px-6 sm:py-5"
             placeholder="Tell me about your project..."
           />
           <div className="text-xl md:text-2xl font-bold font-mono">

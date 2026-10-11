@@ -21,7 +21,7 @@ export const ExperienceCard = ({
   return (
     <div className={`max-w-md w-full ${className}`}>
       <div
-        className="code-block glow hover:scale-105 transition-all duration-300 p-6 md:p-8 cursor-pointer"
+        className="code-block glow transition-all duration-300 p-5 md:p-8 cursor-pointer lg:hover:scale-105"
         onClick={toggleExpanded}
       >
         <div className="flex flex-col gap-2">

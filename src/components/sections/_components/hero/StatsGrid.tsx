@@ -6,7 +6,7 @@ interface StatsGridProps {
 
 export const StatsGrid = ({ stats }: StatsGridProps) => {
   return (
-    <div className="flex flex-wrap md:gap-12">
+    <div className="flex flex-wrap justify-center gap-x-5 gap-y-4 sm:gap-x-10">
       {stats.map((stat, index) => (
         <div
           key={stat.label}

@@ -6,22 +6,24 @@ interface SocialLinksProps {
 
 export const SocialLinks = ({ data }: SocialLinksProps) => {
   return (
-    <div className="code-block glow hover:scale-105 transition-all duration-300 p-8">
+    <div className="code-block glow h-full transition-all duration-300 p-4 sm:p-6 lg:p-8 lg:hover:scale-105">
       <h3 className="text-xl md:text-2xl font-bold mb-4 font-mono">
-        <span className="text-primary-blue">public Map&lt;String, String&gt;</span>{' '}
+        <span className="text-primary-blue">
+          public Map&lt;String, String&gt;
+        </span>{' '}
         <span className="text-white">socialProfiles</span>{' '}
         <span className="text-primary-blue">= Map.ofEntries(</span>
       </h3>
-      <p className="text-gray-400 mb-8 text-lg font-mono">
+      <p className="mb-5 text-base font-mono text-gray-400 sm:mb-8 sm:text-lg">
         {'// Connect with me on these platforms'}
       </p>
 
-      <div className="flex flex-col space-y-6 font-mono">
+      <div className="flex flex-col gap-3 font-mono sm:gap-6">
         <a
           href={data.personal.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center space-x-2 hover:bg-primary-blue/10 p-4 rounded-lg transition-colors group"
+          className="flex flex-wrap items-center gap-x-2 rounded-lg p-3 transition-colors group hover:bg-primary-blue/10 sm:p-4"
         >
           <span className="text-primary-blue">Map.entry(</span>
           <span className="text-white">&quot;github&quot;</span>
@@ -37,7 +39,7 @@ export const SocialLinks = ({ data }: SocialLinksProps) => {
           href={data.personal.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center space-x-2 hover:bg-primary-blue/10 p-4 rounded-lg transition-colors group"
+          className="flex flex-wrap items-center gap-x-2 rounded-lg p-3 transition-colors group hover:bg-primary-blue/10 sm:p-4"
         >
           <span className="text-primary-blue">Map.entry(</span>
           <span className="text-white">&quot;linkedin&quot;</span>
@@ -54,7 +56,7 @@ export const SocialLinks = ({ data }: SocialLinksProps) => {
             href={data.personal.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 hover:bg-primary-blue/10 p-4 rounded-lg transition-colors group"
+            className="flex flex-wrap items-center gap-x-2 rounded-lg p-3 transition-colors group hover:bg-primary-blue/10 sm:p-4"
           >
             <span className="text-primary-blue">Map.entry(</span>
             <span className="text-white">&quot;website&quot;</span>

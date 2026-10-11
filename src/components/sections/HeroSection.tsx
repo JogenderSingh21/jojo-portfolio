@@ -25,7 +25,7 @@ export const HeroSection = ({ data }: HeroSectionProps) => {
         </div>
 
         {/* Bio */}
-        <p className="text-md md:text-md text-gray-400 max-w-6xl whitespace-pre-line text-center">
+        <p className="text-sm md:text-md text-gray-400 max-w-6xl whitespace-pre-line text-center">
           {data.personal.bio}
         </p>
 

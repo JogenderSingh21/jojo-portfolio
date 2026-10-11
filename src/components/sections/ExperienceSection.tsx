@@ -29,7 +29,7 @@ export const ExperienceSection = ({ data }: ExperienceSectionProps) => {
           {/* Timeline Container - Fixed center column approach */}
           <div className="relative max-w-7xl mx-auto w-full">
             {/* Timeline items with proper spacing */}
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-5 md:gap-0">
               {data.experience.map((exp, index) => (
                 <TimelineItem
                   key={exp.id}

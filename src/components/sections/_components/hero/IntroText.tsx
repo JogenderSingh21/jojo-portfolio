@@ -37,7 +37,7 @@ const TypewriterText = ({ text }: { text: string }) => {
   }, [text])
 
   return (
-    <span className="text-primary-blue text-lg md:text-xl font-mono">
+    <span className="w-full break-words text-sm font-mono text-primary-blue sm:text-base md:text-xl">
       {displayedText}
       <span
         className={`inline-block w-2 h-5 bg-primary-blue ml-1 transition-opacity duration-100 ${
@@ -102,11 +102,11 @@ export const IntroText = ({ name, title }: IntroTextProps) => {
   return (
     <div className="flex flex-col items-center lg:items-start gap-2 text-center lg:text-left">
       <TypewriterText text='System.out.println("Hello World! 👋🏻 Welcome to my portfolio");' />
-      <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
+      <h1 className="break-words text-4xl font-bold tracking-tight sm:text-5xl md:text-7xl lg:text-8xl">
         <span className="text-foreground">{name}</span>
         <MorphingDot />
       </h1>
-      <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 font-mono max-w-4xl mx-auto leading-relaxed">
+      <h2 className="mx-auto max-w-4xl text-lg font-mono leading-relaxed text-gray-300 sm:text-xl md:text-2xl lg:text-3xl">
         {title}
       </h2>
     </div>

@@ -141,33 +141,11 @@ export const TechStackGrid = ({ data }: TechStackGridProps) => {
       </div> */}
 
       {/* Organic Tech Stack Filters */}
-      <div
-        style={{
-          width: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          padding: '8px 12px',
-          boxSizing: 'border-box',
-        }}
-      >
+      <div className="w-full sm:flex sm:justify-center">
         <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '8px',
-            width: 'fit-content',
-            maxWidth: '100%',
-            padding: '10px',
-            boxSizing: 'border-box',
-            border: '1px solid rgba(148, 163, 184, 0.16)',
-            borderRadius: '22px',
-            background: 'rgba(20, 24, 32, 0.82)',
-            backdropFilter: 'blur(16px)',
-            WebkitBackdropFilter: 'blur(16px)',
-            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)',
-          }}
+          role="group"
+          aria-label="Filter skills by category"
+          className="grid w-full grid-cols-2 gap-2 rounded-2xl border border-slate-400/15 bg-slate-900/80 p-2 shadow-lg shadow-black/10 backdrop-blur-md sm:flex sm:w-fit sm:flex-wrap sm:justify-center sm:gap-2 sm:p-2.5"
         >
           {[
             {
@@ -191,74 +169,26 @@ export const TechStackGrid = ({ data }: TechStackGridProps) => {
                 type="button"
                 onClick={() => setSelectedCategory(item.key)}
                 aria-pressed={active}
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '9px',
-                  padding: '10px 14px',
-                  minHeight: '42px',
-                  borderRadius: '14px',
-                  border: active
-                    ? '1px solid rgba(125, 211, 252, 0.65)'
-                    : '1px solid transparent',
-                  background: active
-                    ? 'linear-gradient(135deg, #38bdf8, #60a5fa)'
-                    : 'rgba(255, 255, 255, 0.025)',
-                  color: active ? '#101820' : '#a7b0c0',
-                  fontFamily: 'monospace',
-                  fontSize: '12px',
-                  fontWeight: active ? 700 : 500,
-                  whiteSpace: 'nowrap',
-                  cursor: 'pointer',
-                  flexShrink: 0,
-                  boxSizing: 'border-box',
-                  boxShadow: active
-                    ? '0 3px 12px rgba(56, 189, 248, 0.16)'
-                    : 'none',
-                  transition:
-                    'background 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease',
-                }}
-                onMouseEnter={event => {
-                  if (!active) {
-                    event.currentTarget.style.background =
-                      'rgba(125, 211, 252, 0.09)'
-                    event.currentTarget.style.borderColor =
-                      'rgba(125, 211, 252, 0.18)'
-                    event.currentTarget.style.color = '#e2e8f0'
-                  }
-                }}
-                onMouseLeave={event => {
-                  if (!active) {
-                    event.currentTarget.style.background =
-                      'rgba(255, 255, 255, 0.025)'
-                    event.currentTarget.style.borderColor = 'transparent'
-                    event.currentTarget.style.color = '#a7b0c0'
-                  }
-                }}
+                className={`inline-flex min-h-11 min-w-0 items-center justify-between gap-1 rounded-xl border px-2 text-left font-mono text-[10px] leading-tight transition-colors duration-200 sm:min-h-[42px] sm:justify-center sm:gap-2 sm:px-3 sm:text-xs ${
+                  active
+                    ? 'border-sky-300/65 bg-gradient-to-br from-sky-400 to-blue-400 font-bold text-slate-950 shadow-md shadow-sky-400/15'
+                    : 'border-transparent bg-white/[0.025] text-slate-400 hover:border-sky-300/20 hover:bg-sky-300/10 hover:text-slate-200'
+                }`}
               >
-                <span style={{ fontSize: '15px', lineHeight: 1 }}>
+                <span className="hidden shrink-0 text-[15px] leading-none sm:inline">
                   {item.icon}
                 </span>
 
-                <span>{item.label}</span>
+                <span className="min-w-0 flex-1 text-center sm:flex-none sm:whitespace-nowrap">
+                  {item.label}
+                </span>
 
                 <span
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    minWidth: '24px',
-                    padding: '4px 6px',
-                    borderRadius: '7px',
-                    background: active
-                      ? 'rgba(255, 255, 255, 0.28)'
-                      : 'rgba(148, 163, 184, 0.12)',
-                    color: active ? '#101820' : '#94a3b8',
-                    fontSize: '10px',
-                    lineHeight: 1,
-                    boxSizing: 'border-box',
-                  }}
+                  className={`inline-flex min-w-5 shrink-0 items-center justify-center rounded-md px-1 py-1 text-[9px] leading-none sm:min-w-6 sm:px-1.5 sm:text-[10px] ${
+                    active
+                      ? 'bg-white/30 text-slate-950'
+                      : 'bg-slate-400/10 text-slate-400'
+                  }`}
                 >
                   {item.count}
                 </span>

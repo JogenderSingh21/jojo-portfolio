@@ -8,7 +8,7 @@ interface ServiceCardProps {
 export const ServiceCard = ({ service, index }: ServiceCardProps) => {
   return (
     <div
-      className="code-block glow hover:scale-105 transition-all duration-300 fade-in p-8"
+      className="code-block glow transition-all duration-300 fade-in p-5 sm:p-8 lg:hover:scale-105"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="flex flex-col gap-6 h-full">
@@ -18,9 +18,7 @@ export const ServiceCard = ({ service, index }: ServiceCardProps) => {
         <h3 className="text-lg md:text-xl font-bold text-primary-blue text-center">
           {service.title}
         </h3>
-        <p className="text-gray-300 flex-grow text-md">
-          {service.description}
-        </p>
+        <p className="text-gray-300 flex-grow text-md">{service.description}</p>
         <ul className="flex flex-col gap-1">
           {service.features.map((feature, idx) => (
             <li
