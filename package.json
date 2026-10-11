@@ -5,32 +5,34 @@
   "scripts": {
     "dev": "next dev --turbopack -H 0.0.0.0",
     "build": "next build",
-    "build:export": "next build && next export",
+    "build:export": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint:fix": "next lint --fix"
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "next": "^15.5.27",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "next": "^16.4.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
     "simple-icons": "^16.34.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "^15.5.27",
+    "eslint-config-next": "^16.4.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.5.1",
     "prettier": "^3.6.1",
     "prettier-plugin-organize-imports": "^4.1.0",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=22.13.0"
   }
 }
