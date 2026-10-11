@@ -84,6 +84,7 @@ export interface Project {
   title: string
   description: string
   image: string
+  icon?: string
   category: string
   status: 'ongoing' | 'completed'
   featured: boolean

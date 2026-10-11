@@ -1,6 +1,6 @@
-# JHVS Development Portfolio
+# Jogender Singh - Portfolio Website
 
-A modern, responsive portfolio website built with Next.js 15, showcasing full-stack JavaScript development expertise with a VSCode-inspired dark theme.
+A modern, responsive portfolio website built with Next.js 15, showcasing backend engineering, distributed microservices, and event-driven architecture with a VSCode-inspired dark theme.
 
 ## 🚀 Features
 
@@ -75,7 +75,7 @@ src/
 
    ```bash
    git clone <repository-url>
-   cd jhvs-portfolio-website/react-project
+   cd jojo-portfolio-website/react-project
    ```
 
 2. **Install dependencies**

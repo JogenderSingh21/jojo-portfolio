@@ -1,118 +1,458 @@
 {
   "projects": [
     {
-      "id": "mayzing-platform",
-      "title": "Mayzing E-commerce Platform",
-      "description": "Complete redesign and migration of a print-on-demand e-commerce platform from monolith to microservices architecture.",
-      "image": "/projects/mayzing_logo.jpeg",
-      "category": "Full Stack",
-      "status": "ongoing",
+      "id": "real-time-event-driven-streaming-platform",
+      "title": "Real-Time Event Streaming Platform",
+      "description": "Kafka and Spring Boot microservices that process millions of daily transactions without losing a message during traffic spikes.",
+      "image": "/logo.svg",
+      "category": "Distributed Systems",
+      "status": "completed",
       "featured": true,
       "technologies": [
-        "React",
-        "Next.js",
-        "NestJS",
-        "GraphQL",
+        "Java",
+        "Spring Boot",
+        "Apache Kafka",
         "Docker",
         "AWS"
       ],
       "highlights": [
-        "Built from scratch with modern React and TypeScript",
-        "Microservices architecture with GraphQL communication",
-        "Real-time order processing and tracking",
-        "Integrated payment systems and shipping APIs"
+        "Topics, partitions and consumer groups designed for high-volume async messaging",
+        "Zero data loss under traffic spikes",
+        "Decoupled microservices communicating over event streams"
       ],
       "links": {
-        "live": "https://mayzing.com",
-        "private": true
+        "github": "https://github.com/JogenderSingh21/real-time-event-driven-streaming-platform",
+        "live": "",
+        "private": true,
+        "discontinued": false
       }
     },
     {
-      "id": "portfolio-website",
-      "title": "JHVS Development Portfolio",
-      "description": "Personal portfolio website built with Next.js 15, featuring dynamic content, VSCode-inspired design, and modern animations.",
+      "id": "scalable-cloud-database-management-service",
+      "title": "Cloud Database Management Service",
+      "description": "Spring Boot service on MongoDB that automates cluster health monitoring, index recommendations and query tuning.",
       "image": "/logo.svg",
-      "category": "Frontend",
+      "category": "Backend",
       "status": "completed",
       "featured": true,
-      "technologies": ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS"],
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "MongoDB",
+        "AWS",
+        "REST APIs"
+      ],
       "highlights": [
-        "Server-side rendering with Next.js 15",
-        "Dynamic content from JSON configuration",
-        "VSCode-inspired dark theme design",
-        "Responsive and accessible interface"
+        "Monitors cluster health and recommends indexes automatically",
+        "Index and query tuning to cut API response latency",
+        "Built for high-concurrency workloads"
       ],
       "links": {
-        "live": "https://jhvs.dev",
-        "github": "https://github.com/jhvs-development/jhvs-porfolio-website"
+        "github": "https://github.com/JogenderSingh21/scalable-cloud-database-management-service",
+        "live": "",
+        "private": true,
+        "discontinued": false
       }
     },
     {
-      "id": "tv-streaming-app",
-      "title": "Belgian TV Streaming Platform",
-      "description": "Enhanced TV box application for major Belgian telecommunications company, integrating Netflix and Disney+ services.",
-      "image": "/projects/proximus_logo.jpeg",
+      "id": "collaborative-drawing-app",
+      "title": "Collaborative Drawing Board",
+      "description": "A shared canvas where multiple people draw together, with strokes synced live over WebSockets.",
+      "image": "/logo.svg",
+      "category": "Distributed Systems",
+      "status": "completed",
+      "featured": true,
+      "technologies": [
+        "JavaScript",
+        "WebSockets",
+        "Canvas"
+      ],
+      "highlights": [
+        "Multi-user drawing synchronised in real time",
+        "Canvas state kept consistent across clients"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/collaborative-drawing-app",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "email-reporting-system",
+      "title": "Email Reporting Pipeline",
+      "description": "Python pipeline that picks up incoming emails, cleans the raw data and sends back personalised summaries, replacing manual spreadsheet work.",
+      "image": "/logo.svg",
+      "category": "Backend",
+      "status": "completed",
+      "featured": true,
+      "technologies": [
+        "Python",
+        "Email Automation",
+        "Data Cleaning"
+      ],
+      "highlights": [
+        "Inbox-triggered: reports generate as soon as data arrives",
+        "Automated cleaning and transformation before reporting"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/email_reporting_system",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "chat-application-mern",
+      "title": "Real-Time Chat App",
+      "description": "MERN-stack messaging app with live message delivery.",
+      "image": "/logo.svg",
       "category": "Full Stack",
-      "status": "completed",
-      "featured": true,
-      "technologies": ["Java", "Spring", "JavaScript", "GraphQL", "Oracle"],
-      "highlights": [
-        "Migrated from Java 6 to 8 and Spring 3 to 5",
-        "Integrated major streaming services",
-        "Improved code quality with SOLID principles",
-        "Enhanced performance and maintainability"
-      ],
-      "links": {
-        "live": "https://www.proximus.be/en/id_cr_android_tv_decoder/personal/equipment/tv-equipment/android-tv-decoder.html",
-        "private": true
-      }
-    },
-    {
-      "id": "mobile-hr-platform",
-      "title": "Cross-platform HR Applications",
-      "description": "Suite of mobile and web applications for HR management using Ionic framework with Firebase backend.",
-      "image": "/projects/devoteam_logo.jpeg",
-      "category": "Mobile",
-      "status": "completed",
-      "featured": false,
-      "technologies": ["Ionic", "Java", "MongoDB", "Firebase", "AWS EC2"],
-      "highlights": [
-        "Cross-platform mobile applications",
-        "Real-time data synchronization",
-        "Firebase integration for backend services",
-        "Deployed on AWS infrastructure"
-      ],
-      "links": {
-        "discontinued": true,
-        "private": true
-      }
-    },
-    {
-      "id": "invoice-management-mvp",
-      "title": "Email Invoice Management System",
-      "description": "MVP application for automated email invoice processing with machine learning capabilities for document scanning.",
-      "image": "/projects/utilus_logo.jpeg",
-      "category": "AI/ML",
       "status": "completed",
       "featured": false,
       "technologies": [
-        "Java",
-        "Angular",
-        "PostgreSQL",
-        "AWS",
-        "Machine Learning"
-      ],
-      "highlights": [
-        "Automated email processing and parsing",
-        "ML-powered document scanning and recognition",
-        "Cloud-based architecture on AWS",
-        "Angular frontend with responsive design"
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js"
       ],
       "links": {
-        "discontinued": true,
-        "private": true
+        "github": "https://github.com/JogenderSingh21/chat-application-mern",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "online-banking",
+      "title": "Online Banking App",
+      "description": "Banking-style web app with account management and money-transfer flows.",
+      "image": "/logo.svg",
+      "category": "Full Stack",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "TypeScript",
+        "React",
+        "Node.js"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/online_banking",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "paytm-app",
+      "title": "Paytm Wallet Clone",
+      "description": "Wallet-style payments app for sending money between users.",
+      "image": "/logo.svg",
+      "category": "Full Stack",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "JavaScript",
+        "React"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/paytm-app",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "e-commerce",
+      "title": "E-Commerce Storefront",
+      "description": "Online store with product browsing and purchase flows.",
+      "image": "/logo.svg",
+      "category": "Full Stack",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/e-Commerce",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "react-ecommerce-admin",
+      "title": "E-Commerce Admin Dashboard",
+      "description": "Admin panel for managing a store's products, categories and day-to-day operations.",
+      "image": "/logo.svg",
+      "category": "Full Stack",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "TypeScript",
+        "React"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/react-eCommerce-admin",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "blogging-website",
+      "title": "Blogging Platform",
+      "description": "Blog where users write, publish and read articles.",
+      "image": "/logo.svg",
+      "category": "Full Stack",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "TypeScript",
+        "React"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/blogging-website",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "todo-app-mern",
+      "title": "Todo App",
+      "description": "MERN task manager with full CRUD and persistent storage.",
+      "image": "/logo.svg",
+      "category": "Full Stack",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/todo-app-mern",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "betblitz",
+      "title": "BetBlitz",
+      "description": "Sports-betting web app built around wagering flows and business rules.",
+      "image": "/logo.svg",
+      "category": "Full Stack",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "JavaScript"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/BetBlitz",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "gps-tracker",
+      "title": "GPS Tracker",
+      "description": "Android app that tracks live location and plots it on a map.",
+      "image": "/logo.svg",
+      "category": "Mobile",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "Kotlin",
+        "Android",
+        "Maps"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/GPS-Tracker",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "chatbot",
+      "title": "Chatbot",
+      "description": "Android chat app with a conversational interface and automated replies.",
+      "image": "/logo.svg",
+      "category": "Mobile",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "Kotlin",
+        "Android"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/ChatBot",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "dotigy",
+      "title": "Dotigy",
+      "description": "Minimal Android music player.",
+      "image": "/logo.svg",
+      "category": "Mobile",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "Kotlin",
+        "Android"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/Dotigy",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "shiksha-app",
+      "title": "Shiksha",
+      "description": "Android learning app for accessing academic content.",
+      "image": "/logo.svg",
+      "category": "Mobile",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "Kotlin",
+        "Android"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/Shiksha-App",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "google-sheets-clone",
+      "title": "Google Sheets Clone",
+      "description": "Java desktop spreadsheet with an editable grid for creating and managing tabular data.",
+      "image": "/logo.svg",
+      "category": "Tools & Games",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "Java"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/GoogleSheetsClone",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "sorting-visualizer-main",
+      "title": "Sorting Visualizer",
+      "description": "Animates common sorting algorithms step by step.",
+      "image": "/logo.svg",
+      "category": "Tools & Games",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "JavaScript"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/Sorting-visualizer-main",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "bubble-shooter-in-js",
+      "title": "Bubble Shooter",
+      "description": "Browser arcade game built with JavaScript and Canvas.",
+      "image": "/logo.svg",
+      "category": "Tools & Games",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "JavaScript",
+        "Canvas"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/bubble-shooter-in-js",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "budget-tracker",
+      "title": "Budget Tracker",
+      "description": "Tracks income and expenses to keep spending in check.",
+      "image": "/logo.svg",
+      "category": "Tools & Games",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "HTML",
+        "JavaScript"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/budget-tracker",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "cheatcode",
+      "title": "Cheatcode",
+      "description": "Small JavaScript utility for quick developer lookups.",
+      "image": "/logo.svg",
+      "category": "Tools & Games",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "JavaScript"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/cheatcode",
+        "live": "",
+        "private": false,
+        "discontinued": false
+      }
+    },
+    {
+      "id": "react-demo-landing-page",
+      "title": "React Landing Page",
+      "description": "Landing page demo focused on layout and visual hierarchy.",
+      "image": "/logo.svg",
+      "category": "Tools & Games",
+      "status": "completed",
+      "featured": false,
+      "technologies": [
+        "JavaScript",
+        "React"
+      ],
+      "links": {
+        "github": "https://github.com/JogenderSingh21/react-demo-landing-page",
+        "live": "",
+        "private": false,
+        "discontinued": false
       }
     }
   ],
-  "categories": ["Full Stack", "Frontend", "Backend", "Mobile", "AI/ML"]
+  "categories": [
+    "Distributed Systems",
+    "Backend",
+    "Full Stack",
+    "Mobile",
+    "Tools & Games"
+  ]
 }

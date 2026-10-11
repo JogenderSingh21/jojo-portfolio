@@ -31,7 +31,7 @@ export const ServicesSection = ({ data }: ServicesSectionProps) => {
         {!isCollapsed && <ServicesGrid services={data.services} />}
 
         <div className="text-4xl md:text-5xl lg:text-6xl font-bold font-mono">
-          <span className="text-primary-blue">&#125;;</span>
+          <span className="text-primary-blue">&#125;</span>
         </div>
       </div>
     </section>

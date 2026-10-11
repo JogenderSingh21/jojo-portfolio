@@ -2,31 +2,34 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'JHVS Development | Portfolio',
+  title: 'Jogender Singh | Backend Software Engineer',
   description:
-    'Professional portfolio of Jhordeym Santos - Full Stack JavaScript Developer specializing in React, Node.js, and modern web technologies. Building scalable applications with 5+ years of experience.',
+    'Professional portfolio of Jogender Singh - Backend Software Engineer specializing in Java, Spring Boot, Apache Kafka, MongoDB, and scalable distributed systems.',
   keywords: [
-    'Full Stack Developer',
-    'JavaScript',
-    'React',
-    'Node.js',
-    'TypeScript',
-    'Next.js',
-    'Brazil Developer',
+    'Backend Software Engineer',
+    'Java Developer',
+    'Spring Boot',
+    'Apache Kafka',
+    'MongoDB',
+    'Microservices',
+    'Distributed Systems',
+    'RESTful APIs',
+    'AWS',
+    'Jogender Singh',
   ],
-  authors: [{ name: 'Jhordeym Santos' }],
+  authors: [{ name: 'Jogender Singh' }],
   openGraph: {
-    title: 'JHVS Development | Portfolio',
+    title: 'Jogender Singh | Backend Software Engineer',
     description:
-      'Professional portfolio showcasing full-stack JavaScript development expertise',
-    url: 'https://jhvsdevelopment.com',
-    siteName: 'Jhvs Development',
+      'Professional portfolio showcasing backend engineering, distributed systems, Kafka streaming, and cloud database optimization.',
+    url: 'https://jogendersingh.dev',
+    siteName: 'Jogender Singh Portfolio',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Jhvs Development Portfolio',
+        alt: 'Jogender Singh Portfolio',
       },
     ],
     locale: 'en_US',
@@ -34,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'JHVS Development | Portfolio',
+    title: 'Jogender Singh | Backend Software Engineer',
     description:
-      'Professional portfolio showcasing full-stack JavaScript development expertise',
+      'Professional portfolio showcasing backend engineering, distributed systems, Kafka streaming, and cloud database optimization.',
     images: ['/images/og-image.jpg'],
   },
   robots: {

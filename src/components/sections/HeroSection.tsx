@@ -13,16 +13,19 @@ interface HeroSectionProps {
 
 export const HeroSection = ({ data }: HeroSectionProps) => {
   return (
-    <section className="flex items-center justify-center relative min-h-screen px-4 sm:px-6 lg:px-8 py-16 sm:py-20 w-full">
-      <div className="flex flex-col justify-center items-center gap-6 sm:gap-8 max-w-7xl w-full fade-in">
+    <section className="relative flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 py-16 sm:py-20 w-full">
+      <div className="flex flex-col justify-center items-center gap-6 sm:gap-10 max-w-7xl w-full fade-in">
         {/* Profile Image + Intro Text */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
-          <ProfileImage name={data.personal.name} imageSrc="/pp_wedding.jpeg" />
+          <ProfileImage
+            name={data.personal.name}
+            imageSrc={data.personal.avatar}
+          />
           <IntroText name={data.personal.name} title={data.personal.title} />
         </div>
 
         {/* Bio */}
-        <p className="text-md md:text-sm text-gray-400 max-w-6xl whitespace-pre-line text-center">
+        <p className="text-md md:text-md text-gray-400 max-w-6xl whitespace-pre-line text-center">
           {data.personal.bio}
         </p>
 
@@ -31,10 +34,9 @@ export const HeroSection = ({ data }: HeroSectionProps) => {
 
         {/* CTA Buttons */}
         <CTAButtons />
-
-        {/* Scroll indicator */}
-        <ScrollIndicator />
       </div>
+      {/* Scroll indicator */}
+      <ScrollIndicator />
     </section>
   )
 }

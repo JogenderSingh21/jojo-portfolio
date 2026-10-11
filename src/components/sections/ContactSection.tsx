@@ -25,11 +25,13 @@ export const ContactSection = ({ data }: ContactSectionProps) => {
             className="text-4xl md:text-5xl lg:text-6xl font-bold cursor-pointer hover:text-white transition-colors"
             onClick={() => setIsCollapsed(!isCollapsed)}
           >
-            <span className="text-primary-blue">async</span>{' '}
+            <span className="text-primary-blue">public</span>{' '}
+            <span className="text-accent-green">CompletableFuture&lt;Connection&gt;</span>{' '}
             <span className="text-white">getInTouch</span>
-            <span className="text-primary-blue">(</span>
+            <span className="text-foreground">(</span>
+            <span className="text-secondary-blue">ClientRequest</span>{' '}
             <span className="text-accent-green">client</span>
-            <span className="text-primary-blue">);</span>
+            <span className="text-foreground">);</span>
           </h2>
           <p className="text-gray-400 text-lg md:text-xl max-w-3xl leading-relaxed">
             Ready to start your next project? Let&apos;s establish a connection
@@ -66,7 +68,7 @@ export const ContactSection = ({ data }: ContactSectionProps) => {
             </span>
             <span> </span>
             <span className="text-white text-xl md:text-2xl font-mono">
-              client.connect
+              client.establishConnection
             </span>
             <span className="text-primary-blue text-xl md:text-2xl font-mono">
               ();

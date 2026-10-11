@@ -11,7 +11,7 @@
         fill="#d4d4d4">
     <!-- Opening bracket -->
     <tspan fill="#4fc1ff">&lt;</tspan><!--
-    -->JHVS<!--
+    -->JS<!--
     --><tspan fill="#4fc1ff">/&gt;</tspan>
   </text>
   
@@ -33,8 +33,8 @@
         font-weight="bold" 
         text-anchor="middle" 
         fill="#4fc1ff" 
-        opacity="0.3"
+        opacity="0.3" 
         filter="url(#glow)">
-    <tspan>&lt;</tspan>JHVS<tspan>/&gt;</tspan>
+    <tspan>&lt;</tspan>JS<tspan>/&gt;</tspan>
   </text>
 </svg>

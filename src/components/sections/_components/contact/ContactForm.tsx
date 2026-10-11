@@ -2,23 +2,23 @@ export const ContactForm = () => {
   return (
     <div className="code-block glow hover:scale-105 transition-all duration-300 p-8">
       <h3 className="text-xl md:text-2xl font-bold mb-4 font-mono">
-        <span className="text-primary-blue">const</span>{' '}
-        <span className="text-white">client</span>{' '}
-        <span className="text-primary-blue">=</span>{' '}
-        <span className="text-primary-blue">&#123;</span>
+        <span className="text-primary-blue">public record</span>{' '}
+        <span className="text-white">ClientRequest</span>
+        <span className="text-primary-blue">(</span>
       </h3>
       <p className="text-gray-400 mb-8 font-mono">
-        {'// Fill in your details to initiate connection'}
+        {'// Fill in parameters to instantiate request'}
       </p>
 
-      <form className="flex flex-col gap-4">
+      <form className="flex flex-col gap-4 font-mono">
         <div className="flex flex-col gap-1">
           <label
             htmlFor="name"
             className="block text-white font-medium font-mono"
           >
-            <span className="text-white">name:</span>{' '}
-            <span className="text-accent-green">&quot;string&quot;</span>
+            <span className="text-primary-blue">String</span>{' '}
+            <span className="text-white">name</span>
+            <span className="text-accent-green">;</span>
           </label>
           <input
             type="text"
@@ -35,8 +35,9 @@ export const ContactForm = () => {
             htmlFor="email"
             className="block text-white font-medium font-mono"
           >
-            <span className="text-white">email:</span>{' '}
-            <span className="text-accent-green">&quot;string&quot;</span>
+            <span className="text-primary-blue">String</span>{' '}
+            <span className="text-white">email</span>
+            <span className="text-accent-green">;</span>
           </label>
           <input
             type="email"
@@ -53,8 +54,9 @@ export const ContactForm = () => {
             htmlFor="company"
             className="block text-white font-medium font-mono"
           >
-            <span className="text-white">company:</span>{' '}
-            <span className="text-accent-green">&quot;string | null&quot;</span>
+            <span className="text-accent-green">Optional&lt;String&gt;</span>{' '}
+            <span className="text-white">company</span>
+            <span className="text-accent-green">;</span>
           </label>
           <input
             type="text"
@@ -70,8 +72,9 @@ export const ContactForm = () => {
             htmlFor="budget"
             className="block text-white font-medium font-mono"
           >
-            <span className="text-white">budget:</span>{' '}
-            <span className="text-accent-green">&quot;string | null&quot;</span>
+            <span className="text-accent-green">Optional&lt;String&gt;</span>{' '}
+            <span className="text-white">budget</span>
+            <span className="text-accent-green">;</span>
           </label>
           <select
             id="budget"
@@ -91,8 +94,9 @@ export const ContactForm = () => {
             htmlFor="project"
             className="block text-white font-medium font-mono"
           >
-            <span className="text-white">project:</span>{' '}
-            <span className="text-accent-green">&quot;string&quot;</span>
+            <span className="text-primary-blue">String</span>{' '}
+            <span className="text-white">projectDescription</span>
+            <span className="text-accent-green">;</span>
           </label>
           <textarea
             id="project"
@@ -103,11 +107,11 @@ export const ContactForm = () => {
             placeholder="Tell me about your project..."
           />
           <div className="text-xl md:text-2xl font-bold font-mono">
-            <span className="text-primary-blue">&#125;;</span>
+            <span className="text-primary-blue">) &#123;&#125;</span>
           </div>
         </div>
         <button type="submit" className="btn normal-case">
-          <span className="hover:text-white">await sendMessage();</span>
+          <span className="hover:text-white">client.dispatchMessage();</span>
         </button>
       </form>
     </div>

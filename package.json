@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbopack -H 0.0.0.0",
     "build": "next build",
     "build:export": "next build && next export",
     "start": "next start",
@@ -15,7 +15,8 @@
   "dependencies": {
     "next": "15.3.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "simple-icons": "^16.34.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -33,7 +33,7 @@ export const TechStackSection = ({ data }: TechStackSectionProps) => {
         {!isCollapsed && <TechStackGrid data={data} />}
 
         <div className="text-primary-blue text-4xl md:text-5xl lg:text-6xl font-bold font-mono mt-16">
-          <span className="text-primary-blue">&#125;;</span>
+          <span className="text-primary-blue">&#125;</span>
         </div>
       </div>
     </section>

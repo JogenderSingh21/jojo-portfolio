@@ -14,20 +14,20 @@ export const ExperienceSection = ({ data }: ExperienceSectionProps) => {
       id="experience"
       className="flex items-center justify-center relative min-h-screen px-4 sm:px-6 lg:px-8 py-16 sm:py-20"
     >
-      <div className="flex flex-col gap-6 sm:gap-8">
-        <div className="flex flex-col items-center text-center gap-2 sm:gap-3">
+      <div className="flex flex-col gap-6 sm:gap-8 w-full max-w-7xl">
+        <div className="flex flex-col items-center text-center gap-2 sm:gap-3 font-mono">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">
-            <span className="text-primary-blue">&lt;</span>
-            Experience
-            <span className="text-primary-blue">/&gt;</span>
+            <span className="text-primary-blue">public class</span>{' '}
+            <span className="text-white">Experience</span>{' '}
+            <span className="text-primary-blue">&#123;</span>
           </h2>
           <p className="text-gray-400 text-base sm:text-lg md:text-xl max-w-3xl leading-relaxed px-4">
-            {'/* My professional journey in software development */'}
+            {'/* Career milestones and high-traffic engineering roles */'}
           </p>
         </div>
         <div className="flex flex-col items-center justify-center">
           {/* Timeline Container - Fixed center column approach */}
-          <div className="relative max-w-7xl mx-auto">
+          <div className="relative max-w-7xl mx-auto w-full">
             {/* Timeline items with proper spacing */}
             <div className="flex flex-col">
               {data.experience.map((exp, index) => (
@@ -45,6 +45,13 @@ export const ExperienceSection = ({ data }: ExperienceSectionProps) => {
               <TimelineLine />
             </div>
           </div>
+        </div>
+
+        {/* Closing brace */}
+        <div className="flex justify-center mt-6">
+          <span className="text-primary-blue text-4xl md:text-5xl lg:text-6xl font-bold font-mono">
+            &#125;
+          </span>
         </div>
       </div>
     </section>

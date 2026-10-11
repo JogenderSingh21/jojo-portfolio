@@ -1,137 +1,115 @@
 import { Project } from '@/types'
-import Image from 'next/image'
-import { ProjectStatus } from './ProjectStatus'
+import { ProjectBanner } from './ProjectBanner'
 
 interface ProjectCardProps {
   project: Project
   index: number
+  onOpen: () => void
 }
 
-export const ProjectCard = ({ project, index }: ProjectCardProps) => {
+const stop = (e: React.MouseEvent) => e.stopPropagation()
+
+export const ProjectCard = ({ project, index, onOpen }: ProjectCardProps) => {
+  const { links } = project
+
   return (
-    <div
-      className={`relative bg-background/80 backdrop-blur-sm border border-border-color/40 rounded-lg overflow-hidden transition-all duration-300 fade-in flex flex-col hover:border-primary-blue/50 hover:shadow-xl hover:shadow-primary-blue/20 ${
+    <article
+      onClick={onOpen}
+      className={`group relative flex h-full cursor-pointer flex-col overflow-hidden rounded-lg border bg-background/80 backdrop-blur-sm transition-all duration-300 fade-in hover:border-primary-blue/50 hover:shadow-xl hover:shadow-primary-blue/20 ${
         project.featured
-          ? 'border-primary-blue/60 shadow-lg shadow-primary-blue/10'
-          : ''
+          ? 'border-primary-blue/50 shadow-lg shadow-primary-blue/10'
+          : 'border-border-color/40'
       }`}
-      style={{
-        animationDelay: `${index * 0.1}s`,
-      }}
+      style={{ animationDelay: `${index * 0.08}s` }}
     >
-      {/* Project Image */}
-      <div className="relative overflow-hidden">
-        <div className="w-full min-h-36 max-h-48 bg-gradient-to-br from-primary-blue/20 to-secondary-blue/20 flex items-center justify-center">
-          {project.image ? (
-            <Image
-              src={project.image}
-              alt={`${project.title} - Project Screenshot`}
-              width={500}
-              height={280}
-              quality={95}
-              priority={project.featured}
-              className="w-full h-full object-contain bg-white/5"
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            />
-          ) : (
-            <span className="text-5xl">🚀</span>
+      <ProjectBanner project={project} />
+
+      <div className="flex flex-1 flex-col gap-3 p-4">
+        {/* status line (replaces the overlapping badges) */}
+        <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-wider">
+          <span
+            className={
+              project.status === 'ongoing'
+                ? 'text-emerald-400'
+                : 'text-gray-500'
+            }
+          >
+            ● {project.status}
+          </span>
+          {project.featured && (
+            <span className="text-amber-400">★ featured</span>
           )}
         </div>
 
-        {/* Status and Featured Badges */}
-        <ProjectStatus status={project.status} featured={project.featured} />
-      </div>
+        <h4 className="text-base font-bold text-primary-blue md:text-lg">
+          {project.title}
+        </h4>
 
-      {/* Project Content */}
-      <div
-        className="relative flex flex-col flex-grow gap-3"
-        style={{
-          padding: '12px',
-          paddingBottom: '60px', // Reduced space for the smaller links section
-        }}
-      >
-        <div className="flex flex-col gap-2">
-          <h4 className="text-base md:text-lg font-bold text-primary-blue">
-            {project.title}
-          </h4>
-          <p className="text-gray-300 leading-relaxed text-xs md:text-sm">
-            {project.description}
-          </p>
-        </div>
+        <p className="line-clamp-3 text-xs leading-relaxed text-gray-300 md:text-sm">
+          {project.description}
+        </p>
 
-        {/* Highlights */}
-        {project.highlights && project.highlights.length > 0 && (
-          <div className="flex flex-col gap-2">
-            <h5 className="text-primary-blue font-semibold text-sm">
-              Key Features:
-            </h5>
-            <ul className="flex flex-col gap-1.5">
-              {project.highlights.slice(0, 3).map((highlight, idx) => (
-                <li
-                  key={idx}
-                  className="flex items-start gap-2 text-gray-400 text-xs"
-                >
-                  <span className="text-primary-blue mt-0.5 flex-shrink-0">
-                    ▸
-                  </span>
-                  <span>{highlight}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {/* Technologies */}
         <div className="flex flex-wrap gap-2">
-          {project.technologies.slice(0, 4).map((tech, idx) => (
+          {project.technologies.slice(0, 4).map(tech => (
             <span
-              key={idx}
-              className="px-2 py-1 text-xs bg-border-color/30 text-gray-300 rounded-full hover:bg-primary-blue/20 transition-colors duration-300"
+              key={tech}
+              className="rounded-full bg-border-color/30 px-2.5 py-1 text-xs text-gray-300"
             >
               {tech}
             </span>
           ))}
           {project.technologies.length > 4 && (
-            <span className="px-2 py-1 text-xs bg-border-color/30 text-gray-400 rounded-full">
+            <span className="rounded-full bg-border-color/30 px-2.5 py-1 text-xs text-gray-400">
               +{project.technologies.length - 4}
             </span>
           )}
         </div>
 
-        {/* Links */}
-        <div className="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row gap-2 p-3">
-          {project.links.live && (
-            <a
-              href={project.links.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 bg-primary-blue text-background text-center py-2 px-3 rounded-lg hover:bg-secondary-blue transition-colors duration-300 font-semibold text-xs"
-            >
-              Live Demo
-            </a>
-          )}
-          {project.links.github && !project.links.private && (
-            <a
-              href={project.links.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 border border-primary-blue text-primary-blue text-center py-2 px-3 rounded-lg hover:bg-primary-blue hover:text-background transition-colors duration-300 font-semibold text-xs"
-            >
-              GitHub
-            </a>
-          )}
-          {project.links.discontinued && (
-            <div className="flex-1 border border-gray-600 text-gray-400 text-center py-2 px-3 rounded-lg font-semibold text-xs">
-              Discontinued
-            </div>
-          )}
-          {project.links.private && (
-            <div className="flex-1 border border-gray-600 text-gray-400 text-center py-2 px-3 rounded-lg font-semibold text-xs">
-              Private Repo
-            </div>
-          )}
+        {/* footer pinned to the bottom with mt-auto (no absolute positioning) */}
+        <div className="mt-auto flex items-center justify-between gap-2 border-t border-border-color/30 pt-3">
+          <button
+            type="button"
+            className="font-mono text-xs text-gray-400 transition-colors hover:text-primary-blue"
+          >
+            <span className="text-primary-blue">▸</span> details()
+          </button>
+
+          <div className="flex items-center gap-2">
+            {links.live && (
+              <a
+                href={links.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={stop}
+                className="rounded-lg bg-primary-blue px-3 py-1.5 text-xs font-semibold text-background transition-colors hover:bg-secondary-blue"
+              >
+                Live Demo
+              </a>
+            )}
+            {links.github && !links.private && (
+              <a
+                href={links.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={stop}
+                className="rounded-lg border border-primary-blue px-3 py-1.5 text-xs font-semibold text-primary-blue transition-colors hover:bg-primary-blue hover:text-background"
+              >
+                GitHub
+              </a>
+            )}
+            {links.private && (
+              <span className="rounded-lg border border-gray-600 px-3 py-1.5 text-xs font-semibold text-gray-400">
+                Private
+              </span>
+            )}
+            {links.discontinued && (
+              <span className="rounded-lg border border-gray-600 px-3 py-1.5 text-xs font-semibold text-gray-400">
+                Discontinued
+              </span>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </article>
   )
 }

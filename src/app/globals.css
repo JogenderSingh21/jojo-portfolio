@@ -1,5 +1,16 @@
 @import 'tailwindcss';
 
+@theme {
+  --color-background: #1e1e1e;
+  --color-foreground: #d4d4d4;
+  --color-primary-blue: #4fc1ff;
+  --color-secondary-blue: #007acc;
+  --color-accent-green: #4caf50;
+  --color-border-color: #333333;
+  --color-code-bg: #252526;
+  --color-hover-bg: #2a2d2e;
+}
+
 @property --color-primary-blue {
   syntax: '<color>';
   inherits: true;
@@ -40,12 +51,6 @@
   /* VSCode-inspired color scheme */
   --background: #1e1e1e;
   --foreground: #d4d4d4;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -120,12 +125,12 @@ body::before {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border-color);
+  background: var(--color-border-color);
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-blue);
+  background: var(--color-primary-blue);
 }
 
 /* Custom text selection styling */
@@ -157,14 +162,16 @@ code ::-moz-selection {
 }
 
 /* Link styling */
-a {
-  color: var(--primary-blue);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+@layer base {
+  a {
+    color: var(--color-primary-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
 
-a:hover {
-  color: var(--secondary-blue);
+  a:hover {
+    color: var(--color-secondary-blue);
+  }
 }
 
 /* Button base styles */
@@ -354,8 +361,8 @@ a:hover {
 
 /* Code block styling */
 .code-block {
-  background: var(--code-bg);
-  border: 1px solid var(--border-color);
+  background: var(--color-code-bg);
+  border: 1px solid var(--color-border-color);
   border-radius: 8px;
   padding: 20px;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
@@ -365,16 +372,16 @@ a:hover {
   overflow-x: auto;
 }
 
-.code-block::before {
+/* .code-block::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 30px;
-  background: var(--border-color);
+  background: var(--color-border-color);
   border-radius: 8px 8px 0 0;
-}
+} */
 
 /* Syntax highlighting classes */
 .keyword {
@@ -398,7 +405,7 @@ a:hover {
 
 /* Animation classes */
 .fade-in {
-  animation: fadeIn 0.6s ease-out;
+  animation: fadeIn 0.6s ease-out both;
 }
 
 @keyframes fadeIn {
@@ -450,62 +457,6 @@ a:hover {
 
 .glow:hover {
   box-shadow: 0 0 30px rgba(79, 193, 255, 0.5);
-}
-
-/* Custom utility classes for VSCode theme */
-.text-primary-blue {
-  color: #4fc1ff;
-}
-.text-secondary-blue {
-  color: #007acc;
-}
-.text-accent-green {
-  color: #4caf50;
-}
-.text-foreground {
-  color: #d4d4d4;
-}
-
-.bg-primary-blue {
-  background-color: #4fc1ff;
-}
-.bg-secondary-blue {
-  background-color: #007acc;
-}
-.bg-accent-green {
-  background-color: #4caf50;
-}
-.bg-background {
-  background-color: #1e1e1e;
-}
-.bg-code-bg {
-  background-color: #252526;
-}
-.bg-border-color {
-  background-color: #333333;
-}
-.bg-hover-bg {
-  background-color: #2a2d2e;
-}
-
-.border-primary-blue {
-  border-color: #4fc1ff;
-}
-.border-secondary-blue {
-  border-color: #007acc;
-}
-.border-border-color {
-  border-color: #333333;
-}
-
-.hover\:bg-primary-blue:hover {
-  background-color: #4fc1ff;
-}
-.hover\:text-primary-blue:hover {
-  color: #4fc1ff;
-}
-.hover\:border-primary-blue:hover {
-  border-color: #4fc1ff;
 }
 
 /* Section spacing utilities */
@@ -591,7 +542,7 @@ a:hover {
   height: 20px;
   background: var(--color-primary-blue);
   border-radius: 50%;
-  box-shadow: 
+  box-shadow:
     0 0 10px var(--color-primary-blue),
     0 0 20px var(--color-primary-blue),
     0 0 30px var(--color-primary-blue);
@@ -608,7 +559,8 @@ a:hover {
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.8;
     transform: scale(1);
   }
@@ -677,7 +629,14 @@ a:hover {
   }
 
   /* Ensure no element exceeds viewport width */
-  div, section, main, article, aside, nav, header, footer {
+  div,
+  section,
+  main,
+  article,
+  aside,
+  nav,
+  header,
+  footer {
     overflow-x: hidden;
   }
 }

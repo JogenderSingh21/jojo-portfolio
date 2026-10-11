@@ -12,7 +12,7 @@ export const Logo = ({ onClick, className = '' }: LogoProps) => {
       onClick={onClick}
     >
       <span className="text-primary-blue">&lt;</span>
-      <span className="text-foreground mx-1">JHVS</span>
+      <span className="text-foreground mx-1">JS</span>
       <span className="text-primary-blue">/&gt;</span>
     </div>
   )

@@ -1,128 +1,125 @@
 {
   "services": [
     {
-      "id": "fullstack-development",
-      "title": "Full Stack Development",
-      "description": "End-to-end web application development using modern JavaScript technologies. From React frontends to Node.js backends with database integration.",
+      "id": "backend-development",
+      "title": "Backend & Microservices Architecture",
+      "description": "Design and development of core, high-traffic backend services and distributed microservices handling millions of active users and high-concurrency requests.",
       "icon": "🚀",
       "features": [
-        "React & Next.js Applications",
-        "Node.js & Express APIs",
-        "Database Design & Integration",
+        "Distributed Microservices Architecture",
+        "High-Traffic Backend Services (Java & Spring Boot)",
+        "Service-to-Service Communication",
+        "High-Concurrency Performance Optimization",
+        "Clean, Maintainable Production Code"
+      ],
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "Microservices",
+        "RESTful APIs",
+        "Docker",
+        "AWS"
+      ]
+    },
+    {
+      "id": "event-driven-streaming",
+      "title": "Event-Driven Pipelines & Kafka",
+      "description": "Architect asynchronous event-driven pipelines utilizing Apache Kafka to ensure smooth, resilient communication and eliminate system bottlenecks.",
+      "icon": "⚡",
+      "features": [
+        "Apache Kafka Event Streaming",
+        "Asynchronous Messaging Pipelines",
+        "Zero-Data-Loss Spike Management",
+        "Kafka Topics & Consumer Groups",
+        "Resilient Service Integration"
+      ],
+      "technologies": [
+        "Apache Kafka",
+        "Spring Boot",
+        "Java",
+        "Message Queuing",
+        "Distributed Systems"
+      ]
+    },
+    {
+      "id": "database-scaling",
+      "title": "Database Scaling & MongoDB",
+      "description": "Optimization of large-scale database clusters on MongoDB and relational databases, fine-tuning indexes and queries to minimize API latency.",
+      "icon": "🗄️",
+      "features": [
+        "MongoDB Cluster Management",
+        "Database Indexing & Query Tuning",
+        "API Response Latency Reduction",
+        "Schema Design & Normalization",
+        "Caching Layer Integration (Redis)"
+      ],
+      "technologies": [
+        "MongoDB",
+        "PostgreSQL",
+        "MySQL",
+        "Redis",
+        "Spring Data"
+      ]
+    },
+    {
+      "id": "api-development",
+      "title": "RESTful API Engineering & Testing",
+      "description": "Building robust, secure RESTful APIs with comprehensive unit and integration testing, Postman test collections, and debugging.",
+      "icon": "🔗",
+      "features": [
+        "Robust RESTful API Design",
+        "Unit & Integration Testing",
+        "Rigorous Postman API Debugging",
         "Authentication & Security",
-        "Performance Optimization"
+        "Scalable Cloud API Integration"
+      ],
+      "technologies": [
+        "Spring Boot",
+        "RESTful APIs",
+        "Postman",
+        "Java",
+        "Swagger/OpenAPI"
+      ]
+    },
+    {
+      "id": "cloud-devops",
+      "title": "Cloud Architecture & Deployment",
+      "description": "Collaborating to scale cloud architecture on AWS, containerize services using Docker, and configure automated deployments.",
+      "icon": "☁️",
+      "features": [
+        "AWS Cloud Infrastructure Scaling",
+        "Containerization with Docker",
+        "Netlify Hosting & Continuous Deployment",
+        "Version Control Workflows (Git/GitHub)",
+        "Monitoring & System Reliability"
+      ],
+      "technologies": [
+        "AWS",
+        "Docker",
+        "Netlify",
+        "Git",
+        "GitHub",
+        "Linux"
+      ]
+    },
+    {
+      "id": "fullstack-development",
+      "title": "Full-Stack Web Features",
+      "description": "Developing and maintaining full-stack web features using modern frameworks, bridging frontend interfaces with secure, reliable backend services.",
+      "icon": "💻",
+      "features": [
+        "Frontend & Backend Integration",
+        "Responsive User Interfaces",
+        "Secure API Data Consumption",
+        "Database Integration",
+        "Collaborative Agile Workflows"
       ],
       "technologies": [
         "React",
         "Next.js",
         "Node.js",
         "TypeScript",
-        "PostgreSQL",
-        "MongoDB"
-      ]
-    },
-    {
-      "id": "microservices-architecture",
-      "title": "Microservices Architecture",
-      "description": "Design and implement scalable microservices using modern patterns and technologies. GraphQL APIs, containerization, and cloud deployment.",
-      "icon": "🏗️",
-      "features": [
-        "Microservices Design",
-        "GraphQL API Development",
-        "Docker Containerization",
-        "AWS Cloud Deployment",
-        "Service Mesh Implementation"
-      ],
-      "technologies": [
-        "NestJS",
-        "GraphQL",
-        "Docker",
-        "Kubernetes",
-        "AWS",
-        "Redis"
-      ]
-    },
-    {
-      "id": "frontend-development",
-      "title": "Frontend Development",
-      "description": "Modern, responsive, and performant frontend applications with focus on user experience and accessibility. PWA capabilities included.",
-      "icon": "💻",
-      "features": [
-        "Responsive Web Design",
-        "Progressive Web Apps",
-        "Component Libraries",
-        "State Management",
-        "Performance Optimization"
-      ],
-      "technologies": [
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Material UI",
-        "Redux",
-        "Zustand"
-      ]
-    },
-    {
-      "id": "api-development",
-      "title": "API Development",
-      "description": "RESTful and GraphQL APIs with proper documentation, testing, and security. Integration with third-party services and payment systems.",
-      "icon": "🔗",
-      "features": [
-        "RESTful API Design",
-        "GraphQL Implementation",
-        "API Documentation",
-        "Third-party Integrations",
-        "Security Best Practices"
-      ],
-      "technologies": [
-        "Node.js",
-        "Express",
-        "NestJS",
-        "GraphQL",
-        "Swagger",
-        "JWT"
-      ]
-    },
-    {
-      "id": "cloud-deployment",
-      "title": "Cloud & DevOps",
-      "description": "Cloud infrastructure setup, CI/CD pipelines, monitoring, and deployment automation. Focus on AWS services and containerization.",
-      "icon": "☁️",
-      "features": [
-        "AWS Infrastructure",
-        "CI/CD Pipelines",
-        "Container Orchestration",
-        "Monitoring & Logging",
-        "Auto-scaling Solutions"
-      ],
-      "technologies": [
-        "AWS",
-        "Docker",
-        "Kubernetes",
-        "Jenkins",
-        "GitHub Actions",
-        "Terraform"
-      ]
-    },
-    {
-      "id": "consulting",
-      "title": "Technical Consulting",
-      "description": "Architecture reviews, code audits, performance optimization, and technology stack recommendations for your development team.",
-      "icon": "🎯",
-      "features": [
-        "Architecture Design",
-        "Code Review & Audit",
-        "Performance Analysis",
-        "Technology Selection",
-        "Team Mentoring"
-      ],
-      "technologies": [
-        "System Design",
-        "Code Quality",
-        "Best Practices",
-        "Mentoring",
-        "Documentation"
+        "Tailwind CSS"
       ]
     }
   ]

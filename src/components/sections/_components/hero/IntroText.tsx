@@ -49,39 +49,35 @@ const TypewriterText = ({ text }: { text: string }) => {
   )
 }
 
-const JS_ELEMENTS = [
+const JAVA_TOKENS = [
+  ';',
+  '{',
+  '}',
+  '(',
+  ')',
   '.',
+  '<',
+  '>',
+  '@',
+  '=',
   '+',
   '-',
   '*',
   '/',
-  '=',
+  '&',
+  '|',
   '!',
   '?',
   ':',
-  ';',
-  '<',
-  '>',
-  '&',
-  '|',
-  '^',
-  '%',
-  '~',
-  '$',
-  '#',
-  '@',
-  '\\',
-  '_',
-  '`',
 ]
 
 const MorphingDot = () => {
-  const [currentElement, setCurrentElement] = useState('.')
+  const [currentElement, setCurrentElement] = useState(';')
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentElement(
-        JS_ELEMENTS[Math.floor(Math.random() * JS_ELEMENTS.length)]
+        JAVA_TOKENS[Math.floor(Math.random() * JAVA_TOKENS.length)]
       )
     }, 800) // Change every 800ms
 
@@ -105,7 +101,7 @@ const MorphingDot = () => {
 export const IntroText = ({ name, title }: IntroTextProps) => {
   return (
     <div className="flex flex-col items-center lg:items-start gap-2 text-center lg:text-left">
-      <TypewriterText text="// Welcome to my portfolio 👋🏻 " />
+      <TypewriterText text='System.out.println("Hello World! 👋🏻 Welcome to my portfolio");' />
       <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
         <span className="text-foreground">{name}</span>
         <MorphingDot />
