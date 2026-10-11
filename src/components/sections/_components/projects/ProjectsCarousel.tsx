@@ -3,6 +3,7 @@
 import { Project } from '@/types'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { ProjectCard } from './ProjectCard'
+import { ProjectModal } from './ProjectModal'
 
 interface ProjectsCarouselProps {
   projects: Project[]
@@ -46,6 +47,7 @@ const RightArrow = () => (
 export const ProjectsCarousel = ({ projects }: ProjectsCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isHovered, setIsHovered] = useState(false)
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
 
   // Calculate total pages (for desktop: 3 items per page)
@@ -76,7 +78,12 @@ export const ProjectsCarousel = ({ projects }: ProjectsCarouselProps) => {
       {/* Mobile: Vertical List */}
       <div className="lg:hidden flex flex-col gap-8 px-4">
         {projects.map((project, index) => (
-          <ProjectCard key={project.id} project={project} index={index} />
+          <ProjectCard
+            key={project.id}
+            project={project}
+            index={index}
+            onOpen={() => setSelectedProject(project)}
+          />
         ))}
       </div>
 
@@ -106,6 +113,7 @@ export const ProjectsCarousel = ({ projects }: ProjectsCarouselProps) => {
                         key={project.id}
                         project={project}
                         index={pageIndex * itemsPerPage + index}
+                        onOpen={() => setSelectedProject(project)}
                       />
                     ))}
                 </div>
@@ -152,6 +160,11 @@ export const ProjectsCarousel = ({ projects }: ProjectsCarouselProps) => {
           </div>
         )}
       </div>
+
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </div>
   )
 }
